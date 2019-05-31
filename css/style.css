@@ -18,6 +18,7 @@ body {
   display: flex;
   height: 20px;
   line-height: unset;
+  margin-bottom: 10px;
 }
 .logo:hover {
   cursor: pointer;
@@ -39,6 +40,15 @@ body {
 
 .sortcontainer {
   width: 90px;
+}
+.sortcontainer .filtersbutton {
+  background-color: transparent;
+  padding: 6px;
+  font-family: "Exo", sans-serif;
+  border: 2px solid var(--buttons-border-color);
+}
+.sortcontainer .filtersbutton:hover {
+  cursor: pointer;
 }
 .sortcontainer .sort-purpose {
   padding-top: 20px;
@@ -157,7 +167,7 @@ body {
   padding-top: 30px;
 }
 .products-list .header .top-line .account {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Exo", sans-serif;
   padding: 10px 10px;
 }
@@ -243,7 +253,7 @@ body {
 }
 .products-list .header .bottom-line .sortby span {
   font-family: "Tinos", serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 .products-list .header .bottom-line .sortby span:hover {
   cursor: pointer;
@@ -352,9 +362,12 @@ body {
   font-family: "Exo", sans-serif;
   font-size: 14px;
   display: block;
+  padding-left: 5px;
+  border-radius: 4px;
 }
 .products-list .footer .menu li:hover {
   cursor: pointer;
+  background-color: var(--fill-color);
 }
 .products-list .footer .contacts {
   line-height: 30px;
@@ -379,8 +392,10 @@ body {
   background-color: black;
   color: white;
   font-family: "Exo", sans-serif;
-  font-size: 14px;
-  padding: 14px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
 }
 .products-list .footer .contacts .email .button:hover {
   cursor: pointer;
