@@ -32,14 +32,14 @@
       <div class="menuline">
         <ul class="menu">
           <li class='menulistitem'>Home</li>
-          <li class='menulistitem'>Men &blacktriangledown;
+          <li class='menulistitem'>Men <span>&blacktriangledown;</span>
             <ul class="dropdown-content">
               <li>Option 1</li>
               <li>Option 2</li>
               <li>Option 3</li>
             </ul>
           </li>
-          <li class='menulistitem'>Women &blacktriangledown;
+          <li class='menulistitem'>Women <span>&blacktriangledown;</span>
             <ul class="dropdown-content">
               <li>Option 1</li>
               <li>Baseball / Softball (120)</li>
@@ -71,20 +71,28 @@
 
     <hr>
 
-    <div class="mainpart">
-      <div class='sortcontainer'>
-        <script>
-        function showfilters() {
-          document.getElementById("filters_on_top_of_everything").style.display = "block";
-        }
-        function hidefilters() {
-          document.getElementById("filters_on_top_of_everything").style.display = "none";
-        }
-        </script>
+    <script>
+    function showfilters() {
+      document.getElementById("sortcontainer").style.display = "block";
+      document.getElementById("backgroundforfilters").style.display = "block";
+      document.getElementById("sortcontainer").classList.add('sortcontainer_on_top_of_everything');
+    }
+    function hidefilters() {
+      document.getElementById("sortcontainer").style.display = "";
+      document.getElementById("sortcontainer").classList.remove('sortcontainer_on_top_of_everything');
+      document.getElementById("backgroundforfilters").style.display = "none";
+    }
+    </script>
 
-        <button class='filtersbutton' onclick="showfilters()">Filters</button>
+    <div class = 'spaceontop'>
+      <button class='filtersbutton' onclick="showfilters()">Show Filters</button>
+    </div>
+
+    <div class="filters_and_products">
+      <div class='sortcontainer' id='sortcontainer'>
+
         <div class="sort-purpose">
-          <span id='check'>Men ——</span>
+          <span>Men ——</span>
           <ul>
              <li style="font-weight: bold">Lifestyle (52)</li>
              <li>Running (128)</li>
@@ -162,7 +170,10 @@
           </div>
         </div>
       </div>
+
+
         <div class="productscontainer">
+
           <div class="product">
             <div class="image" style="background-image: url(media/product.png);"></div>
             <div class="name">
@@ -393,88 +404,7 @@
 
   </div>
 
-  <div class='filters_on_top_of_everything' id='filters_on_top_of_everything' onclick="hidefilters()">
-    <div class='sortcontainer' style="width: 80%; padding: 10px; background-color: var(--background-color);">
-      <div class="sort-purpose">
-        <span id='check'>Men ——</span>
-        <ul>
-           <li style="font-weight: bold">Lifestyle (52)</li>
-           <li>Running (128)</li>
-           <li>Basketball (76)</li>
-           <li>Football (43)</li>
-           <li>Soccer (94)</li>
-           <li>Training & Gym (56)</li>
-           <li>Baseball / Softball (120)</li>
-           <li>Golf (34)</li>
-           <li>Skateboarding (29)</li>
-           <li>Tennis (12)</li>
-           <li>Track & Field (98)</li>
-           <li>Lacrosse (22)</li>
-        </ul>
-      </div>
-      <div class="sort-size">
-        <span class="header">Size  ——</span>
-        <div class="sizes">
-          <span>4</span>
-          <span>4.5</span>
-          <span>5</span>
-          <span>5.5</span>
-          <span>6</span>
-          <span>6.5</span>
-          <span>7</span>
-          <span>7.5</span>
-          <span>8</span>
-          <span>8.5</span>
-          <span>9</span>
-          <span>9.5</span>
-          <span>10</span>
-          <span>10.5</span>
-          <span>11</span>
-          <span>11.5</span>
-          <span>12</span>
-          <span>12.5</span>
-          <span>13</span>
-          <span>13.5</span>
-          <span>14</span>
-          <span>15</span>
-          <span>16</span>
-          <span>17</span>
-          <span>18</span>
-          <span>19</span>
-        </div>
-      </div>
-      <div class="sort-brand">
-        <span>Brand  ——</span>
-        <ul>
-           <li>Adidas (52)</li>
-           <li>Anatom (128)</li>
-           <li>Asics (76)</li>
-           <li>Brooks (43)</li>
-           <li>Columbia (94)</li>
-           <li>Dynafit (56)</li>
-           <li>New Balance (120)</li>
-        </ul>
-      </div>
-      <div class="sort-color">
-        <span>Color ——</span>
-        <div class="colors" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr;">
-          <div class="color" style="--color: white"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #e4e4e4"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #845d3e"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #777777"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #101011"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #79bc2f"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #028fca"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #ea3321"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #dc2191"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #8e3ea1"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #ffd60a"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #f4690f"><i class="fas fa-check"></i></div>
-          <div class="color" style="--color: #111111"><i class="fas fa-check"></i></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class ='backgroundforfilters' id='backgroundforfilters' onclick="hidefilters()"></div>
 
 
 

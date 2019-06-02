@@ -38,125 +38,6 @@ body {
   padding: 9px 2px;
 }
 
-.sortcontainer {
-  width: 90px;
-}
-.sortcontainer .filtersbutton {
-  background-color: transparent;
-  padding: 6px;
-  font-family: "Exo", sans-serif;
-  border: 2px solid var(--buttons-border-color);
-}
-.sortcontainer .filtersbutton:hover {
-  cursor: pointer;
-}
-.sortcontainer .sort-purpose {
-  padding-top: 20px;
-}
-.sortcontainer .sort-purpose span {
-  position: relative;
-  font-family: "Tinos", serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-style: italic;
-}
-.sortcontainer .sort-purpose ul {
-  list-style: none;
-  padding-top: 20px;
-  line-height: 26px;
-}
-.sortcontainer .sort-purpose ul li {
-  font-family: "Exo", sans-serif;
-  font-size: 15px;
-}
-.sortcontainer .sort-purpose ul li:hover {
-  cursor: pointer;
-}
-.sortcontainer .sort-size {
-  padding-top: 20px;
-}
-.sortcontainer .sort-size .sizes {
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-}
-.sortcontainer .sort-size .sizes span {
-  padding: 4px;
-  font-style: italic;
-  font-size: 15px;
-  font-family: "Exo", sans-serif;
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent;
-}
-.sortcontainer .sort-size .sizes span:hover {
-  cursor: pointer;
-  border-color: var(--buttons-border-color);
-}
-.sortcontainer .sort-size .header {
-  position: relative;
-  font-family: "Tinos", serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-style: italic;
-}
-.sortcontainer .sort-brand {
-  padding-top: 20px;
-}
-.sortcontainer .sort-brand span {
-  position: relative;
-  font-family: "Tinos", serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-style: italic;
-}
-.sortcontainer .sort-brand ul {
-  list-style: none;
-  padding-top: 20px;
-  line-height: 26px;
-}
-.sortcontainer .sort-brand ul li {
-  font-family: "Exo", sans-serif;
-  font-size: 15px;
-}
-.sortcontainer .sort-brand ul li:hover {
-  cursor: pointer;
-}
-.sortcontainer .sort-color {
-  padding-top: 20px;
-}
-.sortcontainer .sort-color span {
-  position: relative;
-  font-family: "Tinos", serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-style: italic;
-}
-.sortcontainer .sort-color .colors {
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.sortcontainer .sort-color .colors .color {
-  height: 24px;
-  width: 24px;
-  background-color: var(--color);
-  margin-right: 12px;
-  margin-bottom: 12px;
-}
-.sortcontainer .sort-color .colors .color .fas.fa-check {
-  font-size: 24px;
-  color: #505050;
-  visibility: hidden;
-}
-.sortcontainer .sort-color .colors .color:hover {
-  cursor: pointer;
-}
-.sortcontainer .sort-color .colors .color:hover .fas.fa-check {
-  visibility: visible;
-}
-
 .products-list {
   margin: auto;
   padding: 10px;
@@ -191,6 +72,9 @@ body {
   font-family: "Exo", sans-serif;
   text-transform: uppercase;
   transform: scale(1.2, 1);
+}
+.products-list .header .menuline .menu .menulistitem span {
+  display: none;
 }
 .products-list .header .menuline .menu .menulistitem .dropdown-content {
   display: none;
@@ -258,50 +142,175 @@ body {
 .products-list .header .bottom-line .sortby span:hover {
   cursor: pointer;
 }
-.products-list .mainpart {
+.products-list .spaceontop {
+  display: flex;
+  justify-content: center;
+}
+.products-list .spaceontop .filtersbutton {
+  height: 50px;
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "Exo", sans-serif;
+  border: 2px solid var(--buttons-border-color);
+}
+.products-list .spaceontop .filtersbutton:hover {
+  cursor: pointer;
+}
+.products-list .filters_and_products {
   display: flex;
 }
-.products-list .mainpart .productscontainer {
+.products-list .filters_and_products .sortcontainer {
+  display: none;
+}
+.products-list .filters_and_products .sortcontainer .sort-purpose {
+  padding-top: 20px;
+}
+.products-list .filters_and_products .sortcontainer .sort-purpose span {
+  position: relative;
+  font-family: "Tinos", serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-list .filters_and_products .sortcontainer .sort-purpose ul {
+  list-style: none;
+  padding-top: 20px;
+  line-height: 26px;
+}
+.products-list .filters_and_products .sortcontainer .sort-purpose ul li {
+  font-family: "Exo", sans-serif;
+  font-size: 15px;
+}
+.products-list .filters_and_products .sortcontainer .sort-purpose ul li:hover {
+  cursor: pointer;
+}
+.products-list .filters_and_products .sortcontainer .sort-size {
+  padding-top: 20px;
+}
+.products-list .filters_and_products .sortcontainer .sort-size .sizes {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+.products-list .filters_and_products .sortcontainer .sort-size .sizes span {
+  padding: 4px;
+  font-style: italic;
+  font-size: 15px;
+  font-family: "Exo", sans-serif;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+}
+.products-list .filters_and_products .sortcontainer .sort-size .sizes span:hover {
+  cursor: pointer;
+  border-color: var(--buttons-border-color);
+}
+.products-list .filters_and_products .sortcontainer .sort-size .header {
+  position: relative;
+  font-family: "Tinos", serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-list .filters_and_products .sortcontainer .sort-brand {
+  padding-top: 20px;
+}
+.products-list .filters_and_products .sortcontainer .sort-brand span {
+  position: relative;
+  font-family: "Tinos", serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-list .filters_and_products .sortcontainer .sort-brand ul {
+  list-style: none;
+  padding-top: 20px;
+  line-height: 26px;
+}
+.products-list .filters_and_products .sortcontainer .sort-brand ul li {
+  font-family: "Exo", sans-serif;
+  font-size: 15px;
+}
+.products-list .filters_and_products .sortcontainer .sort-brand ul li:hover {
+  cursor: pointer;
+}
+.products-list .filters_and_products .sortcontainer .sort-color {
+  padding-top: 20px;
+}
+.products-list .filters_and_products .sortcontainer .sort-color span {
+  position: relative;
+  font-family: "Tinos", serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.products-list .filters_and_products .sortcontainer .sort-color .colors {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.products-list .filters_and_products .sortcontainer .sort-color .colors .color {
+  height: 24px;
+  width: 24px;
+  background-color: var(--color);
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.products-list .filters_and_products .sortcontainer .sort-color .colors .color .fas.fa-check {
+  font-size: 24px;
+  color: #505050;
+  visibility: hidden;
+}
+.products-list .filters_and_products .sortcontainer .sort-color .colors .color:hover {
+  cursor: pointer;
+}
+.products-list .filters_and_products .sortcontainer .sort-color .colors .color:hover .fas.fa-check {
+  visibility: visible;
+}
+.products-list .filters_and_products .productscontainer {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
 }
-.products-list .mainpart .productscontainer .product {
+.products-list .filters_and_products .productscontainer .product {
   margin: 10px;
   width: calc(100% - 20px);
   padding: 30px;
   text-align: center;
   transition: 0.4s;
 }
-.products-list .mainpart .productscontainer .product:hover {
+.products-list .filters_and_products .productscontainer .product:hover {
   background: var(--fill-color);
 }
-.products-list .mainpart .productscontainer .product:hover .price span {
+.products-list .filters_and_products .productscontainer .product:hover .price span {
   color: black;
 }
-.products-list .mainpart .productscontainer .product .image {
+.products-list .filters_and_products .productscontainer .product .image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding-bottom: 100%;
 }
-.products-list .mainpart .productscontainer .product .name {
+.products-list .filters_and_products .productscontainer .product .name {
   font-family: "Tinos", serif;
   font-style: italic;
   text-transform: uppercase;
 }
-.products-list .mainpart .productscontainer .product .name h1 {
+.products-list .filters_and_products .productscontainer .product .name h1 {
   font-size: 20px;
   font-weight: normal;
 }
-.products-list .mainpart .productscontainer .product .category {
+.products-list .filters_and_products .productscontainer .product .category {
   padding-bottom: 20px;
   padding-top: 10px;
 }
-.products-list .mainpart .productscontainer .product .category span {
+.products-list .filters_and_products .productscontainer .product .category span {
   font-family: "Exo", sans-serif;
 }
-.products-list .mainpart .productscontainer .product button {
+.products-list .filters_and_products .productscontainer .product button {
   display: block;
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -313,26 +322,26 @@ body {
   margin: auto;
   transition: 0.4s;
 }
-.products-list .mainpart .productscontainer .product button span {
+.products-list .filters_and_products .productscontainer .product button span {
   padding: 10px;
   font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
   font-family: "Exo", sans-serif;
 }
-.products-list .mainpart .productscontainer .product button i {
+.products-list .filters_and_products .productscontainer .product button i {
   margin-left: 5px;
 }
-.products-list .mainpart .productscontainer .product button:hover {
+.products-list .filters_and_products .productscontainer .product button:hover {
   background-color: black;
   border-color: black;
   color: white;
   cursor: pointer;
 }
-.products-list .mainpart .productscontainer .product .price {
+.products-list .filters_and_products .productscontainer .product .price {
   padding-top: 15px;
 }
-.products-list .mainpart .productscontainer .product .price span {
+.products-list .filters_and_products .productscontainer .product .price span {
   color: #dbcea2;
   transition: 0.4s;
   font-family: "Exo", sans-serif;
@@ -410,22 +419,11 @@ body {
   cursor: pointer;
 }
 
-.filters_on_top_of_everything {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.55);
-  display: none;
-  overflow: hidden;
-}
-
 @media (min-width: 500px) {
-  .products-list .mainpart .productscontainer {
+  .products-list .filters_and_products .productscontainer {
     padding: 10px;
   }
-  .products-list .mainpart .productscontainer .product {
+  .products-list .filters_and_products .productscontainer .product {
     width: calc(100% / 2 - 20px);
   }
 }
@@ -437,11 +435,18 @@ body {
   .products-list .header .menuline .menu .menulistitem {
     padding-right: 40px;
   }
+  .products-list .header .menuline .menu .menulistitem span {
+    display: inline-block;
+  }
   .products-list .header .menuline .menu .menulistitem:hover .dropdown-content {
     display: inline-block;
   }
-  .products-list .mainpart .sortcontainer .filtersbutton {
+  .products-list .filtersbutton {
     display: none;
+  }
+  .products-list .filters_and_products .sortcontainer {
+    display: block;
+    width: 90px;
   }
   .products-list .footer {
     flex-direction: row;
@@ -458,17 +463,41 @@ body {
   .products-list {
     width: 1024px;
   }
-  .products-list .mainpart .sortcontainer {
+  .products-list .filters_and_products .sortcontainer {
     width: 200px;
   }
-  .products-list .mainpart .sortcontainer .sort-size .sizes {
+  .products-list .filters_and_products .sortcontainer .sort-size .sizes {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
-  .products-list .mainpart .sortcontainer .sort-color .colors {
+  .products-list .filters_and_products .sortcontainer .sort-color .colors {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
-  .products-list .mainpart .productscontainer .product {
+  .products-list .filters_and_products .productscontainer .product {
     width: calc(100% / 3 - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .backgroundforfilters {
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  .sortcontainer_on_top_of_everything {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-width: 150px;
+    width: 45%;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 100;
+    position: absolute;
+    background-color: var(--background-color);
   }
 }
 
